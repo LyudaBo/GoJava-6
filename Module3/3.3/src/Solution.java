@@ -7,6 +7,7 @@ public class Solution {
         Course b = new Course("Olya", 20, "Raisa");
         Course c = new Course(date, "Sveta");
         Course d = new Course(date, "Sveta");
+        Course g = new Course("Olya", 20, "Raisa");
         Course[] e = {c, d};
 
         Student k = new Student("Oleg", "Ivanov", 3);
