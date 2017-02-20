@@ -1,7 +1,7 @@
-package Task3;
+package extendsBank;
 
-import Task1.Bank;
-import Task2.Currency;
+import Bank.Bank;
+import Enum.Currency;
 
 
 public class EUBank extends Bank {

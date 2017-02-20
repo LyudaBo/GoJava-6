@@ -1,6 +1,6 @@
-package Task1;
+package Bank;
 
-import Task2.Currency;
+import Enum.Currency;
 
 public abstract class Bank {
     private long id;

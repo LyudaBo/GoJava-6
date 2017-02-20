@@ -1,6 +1,6 @@
-package Task5;
+package BankSystem;
 
-import Task4.User;
+import User.User;
 
 /**
  * Created by Людмила on 20.02.2017.

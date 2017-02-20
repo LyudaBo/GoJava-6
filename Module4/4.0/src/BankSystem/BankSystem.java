@@ -1,6 +1,6 @@
-package Task5;
+package BankSystem;
 
-import Task4.User;
+import User.User;
 
 public interface BankSystem {
     void withdrawOfUser(User user, int amount);

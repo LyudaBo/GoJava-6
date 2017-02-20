@@ -1,13 +1,13 @@
-package Task6;
+package Main;
 
-import Task1.Bank;
-import Task2.Currency;
-import Task3.ChinaBank;
-import Task3.EUBank;
-import Task3.USBank;
-import Task4.User;
-import Task5.BankSystem;
-import Task5.BankSystemImpl;
+import Bank.Bank;
+import Enum.Currency;
+import extendsBank.ChinaBank;
+import extendsBank.EUBank;
+import extendsBank.USBank;
+import User.User;
+import BankSystem.BankSystem;
+import BankSystem.BankSystemImpl;
 
 public class Main {
     public static void main(String[] args) {

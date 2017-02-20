@@ -1,6 +1,6 @@
-package Task4;
+package User;
 
-import Task1.Bank;
+import Bank.Bank;
 
 public class User {
     private long id;

@@ -1,21 +1,19 @@
-package Task3;
+package extendsBank;
 
+import Bank.Bank;
+import Enum.Currency;
 
-import Task1.Bank;
-import Task2.Currency;
-
-public class USBank extends Bank {
-
-    public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+public class ChinaBank extends Bank {
+    public ChinaBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
     public int getLimitOfWithdrawal() {
         int limite;
         if (getCurrency() == Currency.USD) {
-            limite = 1000;
+            limite = 100;
         } else {
-            limite = 1200;
+            limite = 150;
         }
         return limite;
     }
@@ -23,9 +21,9 @@ public class USBank extends Bank {
     public int getLimitOfFunding() {
         int limite;
         if (getCurrency() == Currency.EUR) {
-            limite = 10000;
+            limite = 5000;
         } else {
-            limite = 0;
+            limite = 10000;
         }
         return limite;
     }
@@ -35,27 +33,27 @@ public class USBank extends Bank {
         if (getCurrency() == Currency.USD) {
             rate = 0.01;
         } else {
-            rate = 0.02;
+            rate = 0;
         }
         return rate;
     }
-
 
     public double getCommission(int summ) {
         double commision;
         if (getCurrency() == Currency.USD) {
             if (summ <= 1000) {
-                commision = 0.05;
+                commision = 0.03;
             } else {
-                commision = 0.07;
+                commision = 0.05;
             }
         } else {
             if (summ <= 1000) {
-                commision = 0.06;
+                commision = 0.1;
             } else {
-                commision = 0.08;
+                commision = 0.11;
             }
         }
         return commision;
     }
+
 }
