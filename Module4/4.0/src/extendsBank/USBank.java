@@ -1,8 +1,8 @@
 package extendsBank;
 
 
-import Bank.Bank;
-import Enum.Currency;
+import bank.Bank;
+import _enum.Currency;
 
 public class USBank extends Bank {
 
@@ -11,13 +11,10 @@ public class USBank extends Bank {
     }
 
     public int getLimitOfWithdrawal() {
-        int limite;
         if (getCurrency() == Currency.USD) {
-            limite = 1000;
-        } else {
-            limite = 1200;
+            return 1000;
         }
-        return limite;
+            return 1200;
     }
 
     public int getLimitOfFunding() {

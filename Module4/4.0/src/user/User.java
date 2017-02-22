@@ -1,6 +1,6 @@
-package User;
+package user;
 
-import Bank.Bank;
+import bank.Bank;
 
 public class User {
     private long id;
@@ -79,7 +79,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "user{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +

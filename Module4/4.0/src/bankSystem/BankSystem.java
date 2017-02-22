@@ -1,6 +1,6 @@
-package BankSystem;
+package bankSystem;
 
-import User.User;
+import user.User;
 
 public interface BankSystem {
     void withdrawOfUser(User user, int amount);

@@ -1,6 +1,6 @@
-package Bank;
+package bank;
 
-import Enum.Currency;
+import _enum.Currency;
 
 public abstract class Bank {
     private long id;

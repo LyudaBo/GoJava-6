@@ -1,7 +1,7 @@
 package extendsBank;
 
-import Bank.Bank;
-import Enum.Currency;
+import bank.Bank;
+import _enum.Currency;
 
 
 public class EUBank extends Bank {

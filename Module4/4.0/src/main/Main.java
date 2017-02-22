@@ -1,13 +1,12 @@
-package Main;
+package main;
 
-import Bank.Bank;
-import Enum.Currency;
+import bank.Bank;
+import _enum.Currency;
 import extendsBank.ChinaBank;
 import extendsBank.EUBank;
 import extendsBank.USBank;
-import User.User;
-import BankSystem.BankSystem;
-import BankSystem.BankSystemImpl;
+import user.User;
+import bankSystem.BankSystemImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,15 +28,35 @@ public class Main {
         User user5 = new User(bankChina1.getId(), "Bag", bankChina1.getTotalCapital(), 9, "Baga", bankChina1.getAvrSalaryOfEmployee(), bankChina1);
         User user6 = new User(bankChina2.getId(), "Dag", bankChina2.getTotalCapital(), 11, "Daga", bankChina2.getAvrSalaryOfEmployee(), bankChina2);
 
-        BankSystem bankSystem = new BankSystemImpl();
+        BankSystemImpl bankSystem = new BankSystemImpl();
 
-        bankSystem.withdrawOfUser(user1, 2000);
-        user1.toString();
+        bankSystem.withdrawOfUser(user1, 100);
+        bankSystem.withdrawOfUser(user2, 200);
+        bankSystem.withdrawOfUser(user3, 300);
+        bankSystem.withdrawOfUser(user4, 400);
+        bankSystem.withdrawOfUser(user5, 500);
+        bankSystem.withdrawOfUser(user6, 600);
+
+        bankSystem.fundUser(user1, 1000);
+        bankSystem.fundUser(user2, 1000);
+        bankSystem.fundUser(user3, 3000);
+        bankSystem.fundUser(user4, 400);
+        bankSystem.fundUser(user5, 5000);
+        bankSystem.fundUser(user6, 9000);
+
+        bankSystem.transferMoney(user1, user3, 500);
+        bankSystem.transferMoney(user2, user4, 100);
+        bankSystem.transferMoney(user3, user5, 300);
+        bankSystem.transferMoney(user4, user6, 4000);
+        bankSystem.transferMoney(user5, user1, 5000);
+        bankSystem.transferMoney(user6, user2, 10000);
+
+        bankSystem.paySalary(user1);
         bankSystem.paySalary(user2);
-        user2.toString();
-        bankSystem.transferMoney(user3, user4, 1200);
-        user3.toString();
-        user4.toString();
+        bankSystem.paySalary(user3);
+        bankSystem.paySalary(user4);
+        bankSystem.paySalary(user5);
+        bankSystem.paySalary(user6);
 
     }
 
