@@ -5,41 +5,45 @@ public class ForInt {
 
     public int sum(int[] array) {
         int sum = 0;
-        for ( int number : array)
+        for (int number : array)
             sum += number;
         return sum;
     }
 
     public int max(int[] array) {
-
-        int max = 0;
-        for (int i = 0; i != array.length; i++) {
-            if (array[i] > max) {
-                max = array[i];
-            }
-        }
+        int max = array[0];
+        int largest = array[0];
+        for (int number : array)
+            if (number > max) {
+                largest = max;
+                max = number;
+            } else if (number > largest)
+                largest = number;
         return max;
     }
 
     public int min(int[] array) {
-
-        int min = 0;
-        for (int i = 0; i != array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
-            }
-        }
+        int min = array[0];
+        int largest = array[0];
+        for (int number : array)
+            if (number < min) {
+                largest = min;
+                min = number;
+            } else if (number < largest)
+                largest = number;
         return min;
     }
 
-    public int maxPositive(int[] array) {
+    public String maxPositive(int[] array) {
 
         int maxPositive = 0;
         for (int number : array)
             if (number > 0 && maxPositive < number)
                 maxPositive = number;
-
-        return maxPositive;
+        if (maxPositive <= 0) {
+            return "нет положительных";
+        } else
+            return String.valueOf(maxPositive);
     }
 
     public int Multiplication(int[] array) {
@@ -56,15 +60,14 @@ public class ForInt {
         return array[array.length - 1] % array[0];
     }
 
-    public int largest(int[] array) {
-        int largest = array[0];
-        int secondLargest = array[0];
-        for (int number : array)
-            if (number > largest) {
-                secondLargest = largest;
-                largest = number;
-            } else if (number > secondLargest)
-                secondLargest = number;
-        return largest;
+    public int secondLargest(int[] array) {
+        int secondLargest = 0;
+        for (int j = 0; j < array.length; j++) {
+            if (array[j] < max(array))
+                if (array[j] > secondLargest) {
+                    secondLargest = array[j];
+                }
+        }
+        return secondLargest;
     }
 }
