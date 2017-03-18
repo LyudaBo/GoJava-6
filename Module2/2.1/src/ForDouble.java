@@ -1,8 +1,5 @@
 import static java.lang.Math.abs;
 
-/**
- * Created by Людмила on 05.03.2017.
- */
 public class ForDouble {
     public double sum(double[] array) {
         double sum = 0;
@@ -13,25 +10,19 @@ public class ForDouble {
 
     public double max(double[] array) {
         double max = array[0];
-        double largest = array[0];
         for (double number : array)
             if (number > max) {
-                largest = max;
                 max = number;
-            } else if (number > largest)
-                largest = number;
+            }
         return max;
     }
 
     public double min(double[] array) {
         double min = array[0];
-        double largest = array[0];
         for (double number : array)
             if (number < min) {
-                largest = min;
                 min = number;
-            } else if (number < largest)
-                largest = number;
+            }
         return min;
     }
 
@@ -62,13 +53,13 @@ public class ForDouble {
     }
 
     public double secondLargest(double[] array) {
-        double secondLargest = 0;
-        for (int j = 0; j < array.length; j++) {
-            if (array[j] < max(array))
-                if (array[j] > secondLargest) {
-                    secondLargest = array[j];
-                }
+        double max = max(array);
+        double second = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (second < array[i] && max > array[i]) {
+                second = array[i];
+            }
         }
-        return secondLargest;
+        return second;
     }
 }
