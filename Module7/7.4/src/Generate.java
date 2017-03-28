@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -8,56 +7,91 @@ import java.util.List;
  */
 public class Generate {
     public static void main(String[] args) {
-        Integer[] array = new Integer[10000];
+        ArrayList<Integer> listInt = new ArrayList<Integer>();
+        ArrayList<String> listString = new ArrayList<String>();
+        LinkedList<Integer> linkedInt = new LinkedList<Integer>();
+        LinkedList<String> linkedString = new LinkedList<String>();
 
-        System.out.println(getTimeForAdd10000(new ArrayList()));
-        System.out.println(getTimeForAdd10000(new LinkedList()));
-        System.out.println(getTimeForAdd1000(new LinkedList()));
+        System.out.println("getTimeForAdd1000");
+        System.out.println(getTimeForAdd(listInt, 1000));
+        System.out.println(getTimeForAdd(listString, 1000));
+        System.out.println(getTimeForAdd(linkedInt, 1000));
+        System.out.println(getTimeForAdd(linkedString, 1000));
+
+        System.out.println("getTimeForGet1000");
+        System.out.println(getTimeForGet(listInt, 1000));
+        System.out.println(getTimeForGet(listString, 1000));
+        System.out.println(getTimeForGet(linkedInt, 1000));
+        System.out.println(getTimeForGet(linkedString, 1000));
+
+        System.out.println("getTimeForSet1000");
+        System.out.println(getTimeForSet(listInt, 1000));
+        System.out.println(getTimeForSet(listString, 1000));
+        System.out.println(getTimeForSet(linkedInt, 1000));
+        System.out.println(getTimeForSet(linkedString, 1000));
+
+        System.out.println("getTimeForRemove1000");
+        System.out.println(getTimeForRemove(listInt, 1000));
+        System.out.println(getTimeForRemove(listString, 1000));
+        System.out.println(getTimeForRemove(linkedInt, 1000));
+        System.out.println(getTimeForRemove(linkedString, 1000));
+
+        System.out.println("getTimeForAdd10000");
+        System.out.println(getTimeForAdd(listInt, 10000));
+        System.out.println(getTimeForAdd(listString, 10000));
+        System.out.println(getTimeForAdd(linkedInt, 10000));
+        System.out.println(getTimeForAdd(linkedString, 10000));
+
+        System.out.println("getTimeForGet10000");
+        System.out.println(getTimeForGet(listInt, 10000));
+        System.out.println(getTimeForGet(listString, 10000));
+        System.out.println(getTimeForGet(linkedInt, 10000));
+        System.out.println(getTimeForGet(linkedString, 10000));
+
+        System.out.println("getTimeForSet10000");
+        System.out.println(getTimeForSet(listInt, 10000));
+        System.out.println(getTimeForSet(listString, 10000));
+        System.out.println(getTimeForSet(linkedInt, 10000));
+        System.out.println(getTimeForSet(linkedString, 10000));
+
+        System.out.println("getTimeForRemove10000");
+        System.out.println(getTimeForRemove(listInt, 10000));
+        System.out.println(getTimeForRemove(listString, 10000));
+        System.out.println(getTimeForRemove(linkedInt, 10000));
+        System.out.println(getTimeForRemove(linkedString, 10000));
     }
 
-    public static long getTimeForAdd10000(List list) {
-        long currentTime = new Date().getTime();
-        add10000(list);
-        get10000(list);
-
-        return new Date().getTime() - currentTime;
-    }
-
-    public static void add10000(List list) {
-        for (long i = 0; i < 10000; i++) {
-            list.add(0, new Object());
+    public static long getTimeForAdd(List list, int x) {
+        long currentTime = System.nanoTime();
+        for (long i = 0; i < x; i++) {
+            list.add(i);
         }
+        return System.nanoTime() - currentTime;
     }
 
-    public static void get10000(List list) {
-        for (int i = 0; i < 10000; i++) {
-            list.get(i);
+    public static long getTimeForGet(List list, int x) {
+        long currentTime = System.nanoTime();
+        for (long i = 0; i < x; i++) {
+            list.get((int) i);
         }
+        return System.nanoTime() - currentTime;
     }
 
-    public static void set10000(List list) {
-        for (int i = 0; i < 10000; i++) {
-            list.set(i, "is the best");
+    public static long getTimeForSet(List list, int x) {
+        long currentTime = System.nanoTime();
+        for (long i = 0; i < x; i++) {
+            list.set((int) i, "hlkjk");
         }
+        return System.nanoTime() - currentTime;
     }
 
-    public static void remove10000(List list) {
-        for (int i = 0; i < 10000; i++) {
+    public static long getTimeForRemove(List list, int x) {
+        long currentTime = System.nanoTime();
+        for (long i = x - 1; i >= 0; i--) {
             list.remove(i);
         }
+        return System.nanoTime() - currentTime;
     }
-
-
-    public static long getTimeForAdd1000(List list) {
-        long currentTime = new Date().getTime();
-        add1000(list);
-        return new Date().getTime() - currentTime;
-    }
-
-    public static void add1000(List list) {
-        for (long i = 0; i < 1000; i++) {
-            list.add(0, new Object());
-        }
-    }
-
 }
+
+
