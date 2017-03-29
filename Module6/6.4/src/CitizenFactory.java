@@ -2,6 +2,7 @@
 public class CitizenFactory {
 
     private static class Englishman implements Citizen {
+        public static test();
 
         @Override
         public void sayHello() {
