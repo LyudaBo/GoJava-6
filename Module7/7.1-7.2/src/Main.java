@@ -5,16 +5,16 @@ import java.util.Comparator;
 public class Main {
     public static void main(String[] args) {
 
-        User aor = new User(111, "Irina","Ior", "Iiev", 4001);
-        User bor = new User(112, "Brina","Bor", "Biev", 4002);
-        User cor = new User(113, "Crina","Cor", "Ciev", 4003);
-        User dor = new User(114, "Drina","Dor", "Diev", 4004);
-        User kor = new User(115, "Krina","Kor", "Kiev", 4005);
-        User lor = new User(116, "Lrina","Lor", "Liev", 4006);
-        User mor = new User(117, "Mrina","Mor", "Miev", 4007);
-        User nor = new User(118, "Nrina","Nor", "Niev", 4008);
-        User oor = new User(119, "Orina","Oor", "Oiev", 4009);
-        User por = new User(110, "Prina","Por", "Piev", 4000);
+        User aor = new User(111, "Irina", "Ior", "Iiev", 4001);
+        User bor = new User(112, "Brina", "Bor", "Biev", 4002);
+        User cor = new User(113, "Crina", "Cor", "Ciev", 4003);
+        User dor = new User(114, "Drina", "Dor", "Diev", 4004);
+        User kor = new User(115, "Krina", "Kor", "Kiev", 4005);
+        User lor = new User(116, "Lrina", "Lor", "Liev", 4006);
+        User mor = new User(117, "Mrina", "Mor", "Miev", 4007);
+        User nor = new User(118, "Nrina", "Nor", "Niev", 4008);
+        User oor = new User(119, "Orina", "Oor", "Oiev", 4009);
+        User por = new User(110, "Prina", "Por", "Piev", 4000);
 
 
         ArrayList<Order> orders = new ArrayList<>();
@@ -29,7 +29,6 @@ public class Main {
         orders.add(new Order(1118, 1118, Currency.USD, "Nook", "Nhop", nor));
         orders.add(new Order(1119, 1119, Currency.UAH, "Oook", "Ohop", oor));
         orders.add(new Order(1110, 1110, Currency.USD, "Pook", "Phop", por));
-
 
 
         Collections.sort(orders, new Comparator<Order>() {
