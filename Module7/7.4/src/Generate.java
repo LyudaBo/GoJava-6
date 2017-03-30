@@ -63,7 +63,7 @@ public class Generate {
 
     public static long getTimeForAdd(List list, int x) {
         long currentTime = System.nanoTime();
-        for (long i = 0; i < x; i++) {
+        for (int i = 0; i < x; i++) {
             list.add(i);
         }
         return System.nanoTime() - currentTime;
@@ -71,24 +71,24 @@ public class Generate {
 
     public static long getTimeForGet(List list, int x) {
         long currentTime = System.nanoTime();
-        for (long i = 0; i < x; i++) {
-            list.get((int) i);
+        for (int i = 0; i < x; i++) {
+            list.get(i);
         }
         return System.nanoTime() - currentTime;
     }
 
     public static long getTimeForSet(List list, int x) {
         long currentTime = System.nanoTime();
-        for (long i = 0; i < x; i++) {
-            list.set((int) i, "hlkjk");
+        for (int i = 0; i < x; i++) {
+            list.set(i, "hlkjk");
         }
         return System.nanoTime() - currentTime;
     }
 
     public static long getTimeForRemove(List list, int x) {
         long currentTime = System.nanoTime();
-        for (long i = x - 1; i >= 0; i--) {
-            list.remove(i);
+        for (int i = 0; i < x; i++) {
+            list.remove(0);
         }
         return System.nanoTime() - currentTime;
     }
