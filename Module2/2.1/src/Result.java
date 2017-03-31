@@ -3,7 +3,7 @@
  */
 public class Result {
     public static void main(String[] args) {
-        int[] array = {-3, 9, -6, -1, -6, -8, -45, -56, -4, -5};
+        int[] array = {25, 90, -6, -1, -6, -8, -45, -56, -4, -5};
         double[] arr = {7.9, -5.6, 9.8, -7.4, 567.76, 7.43, -0.001, 75.09, 32.8, -21.56};
         ForInt MyInt = new ForInt();
         System.out.println("sum " + MyInt.sum(array));

@@ -52,9 +52,8 @@ public class ForInt {
         int max = max(array);
         int second = array[0];
         for (int i = 0; i < array.length; i++) {
-            if (second < array[i] && max > array[i]) {
-                second = array[i];
-            }
+            if (array[i] < max && array[i] > second) second = array[i];
+            if (second == max) second = array[1];
         }
         return second;
     }
