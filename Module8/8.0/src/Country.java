@@ -3,7 +3,7 @@
  */
 public enum Country {
     Ukraine,
-    Rossia,
+    Russia,
     England,
     France,
     India

@@ -11,8 +11,8 @@ public class Food {
     генерироваться с помощью IdGenerator при создании товара.
     Товары считаются одинаковыми, если их id одинаковы. Переопределите методы hashCode и equals соответственно.*/
 
-    public Food(long id, String name, Country country, int expiration) {
-        this.id = id;
+    public Food(String name, Country country, int expiration) {
+        this.id = IdGenerator.generateRandom(10);
         this.name = name;
         this.country = country;
         this.expiration = expiration;
@@ -31,5 +31,23 @@ public class Food {
     @Override
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Food{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", country=" + country +
+                ", expiration=" + expiration +
+                '}';
+    }
+
+    public String getName() {
+        return name;
     }
 }

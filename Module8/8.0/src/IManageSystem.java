@@ -12,7 +12,7 @@ public interface IManageSystem<T> {
 
     T get(int id);
 
-    Double getPrice(T obj);
+    Double getPrice(T obj, Food food);
 
     Set<T> getProducts();
 
