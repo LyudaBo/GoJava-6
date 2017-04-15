@@ -1,5 +1,5 @@
 
-public class Order {
+public class Order implements Comparable<Order>{
     private long id;
     private int price;
     private Currency currency;
@@ -101,6 +101,14 @@ public class Order {
                 ", shopIdentificator='" + shopIdentificator + '\'' +
                 ", user=" + user +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Order o) {
+        if (price != o.getPrice()) {
+            return Integer.compare(price, o.getPrice());
+        }
+        return Long.compare(id, o.getId());
     }
 }
 

@@ -1,7 +1,7 @@
 /**
  * Created by Людмила on 25.03.2017.
  */
-public class User {
+public class User implements Comparable<User>{
     private long id;
     private String firstName;
     private String lastName;
@@ -65,5 +65,28 @@ public class User {
 
     public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    @Override
+    public boolean equals ( Object o ) {
+        if (this == o) return true;
+        if (o == null || getClass ( ) != o.getClass ( )) return false;
+
+        User user = (User) o;
+        return getCity ( ) != null ? getCity ( ).equals ( user.getCity ( ) ) : user.getCity ( ) == null;
+    }
+
+    @Override
+    public int hashCode () {
+        int result = getFirstName ( ) != null ? getFirstName ( ).hashCode ( ) : 0;
+        result = 31 * result + (getLastName ( ) != null ? getLastName ( ).hashCode ( ) : 0);
+        result = 31 * result + (getCity ( ) != null ? getCity ( ).hashCode ( ) : 0);
+        result = 31 * result + getBalance ( );
+        return result;
+    }
+
+    @Override
+    public int compareTo ( User o ) {
+        return getCity ().compareTo ( o.getCity () );
     }
 }

@@ -12,7 +12,7 @@ public class Main {
         User kor = new User(115, "Krina", "Kor", "Kiev", 4005);
         User lor = new User(116, "Lrina", "Lor", "Liev", 4006);
         User mor = new User(117, "Mrina", "Mor", "Miev", 4007);
-        User nor = new User(118, "Nrina", "Nor", "Niev", 4008);
+        User nor = new User(118, "Nrina", "Nor", "Wiev", 4008);
         User oor = new User(119, "Orina", "Oor", "Oiev", 4009);
         User por = new User(110, "Prina", "Por", "Piev", 4000);
 
@@ -25,9 +25,9 @@ public class Main {
         orders.add(new Order(1114, 1114, Currency.USD, "Dook", "Dhop", dor));
         orders.add(new Order(1115, 1115, Currency.UAH, "Kook", "Khop", kor));
         orders.add(new Order(1116, 1116, Currency.USD, "Look", "Lhop", lor));
-        orders.add(new Order(1117, 1117, Currency.UAH, "Mook", "Mhop", mor));
+        orders.add(new Order(1117, 1117, Currency.UAH, "Gook", "Mhop", mor));
         orders.add(new Order(1118, 1118, Currency.USD, "Nook", "Nhop", nor));
-        orders.add(new Order(1119, 1119, Currency.UAH, "Oook", "Ohop", oor));
+        orders.add(new Order(1119, 1119, Currency.UAH, "Wook", "Ohop", oor));
         orders.add(new Order(1110, 1110, Currency.USD, "Pook", "Phop", por));
 
 
@@ -46,7 +46,7 @@ public class Main {
         Collections.sort(orders, new Comparator<Order>() {
             @Override
             public int compare(Order o1, Order o2) {
-                int priceCompare = o1.getPrice() - o2.getPrice();
+                int priceCompare = ((Integer) (o1.getPrice())).compareTo(o2.getPrice());
                 if (priceCompare != 0) {
                     return priceCompare;
                 }
