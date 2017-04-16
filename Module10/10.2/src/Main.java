@@ -16,5 +16,13 @@ public class Main {
             System.err.print(" 2 " + newExeption);
         }
         System.err.println(" 3");
+
+        // Для 10.3
+        try {
+            ClassOfExeptions reference = null;
+            reference.getWord();
+        } catch (NullPointerException ex1) {
+            System.out.println(ex1);
+        }
     }
 }
