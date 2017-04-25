@@ -3,9 +3,6 @@
  */
 public class Main {
     public static void main(String[] args) {
-        ClassOfExeptions show = new ClassOfExeptions("Show");
-        System.out.println(show.getWord());
-
         try {
             System.err.print(" 0");
             if (true) {
@@ -21,7 +18,7 @@ public class Main {
         try {
             ClassOfExeptions reference = null;
             reference.getWord();
-        } catch (NullPointerException ex1) {
+        } catch (Exception ex1) {
             System.out.println(ex1);
         }
     }

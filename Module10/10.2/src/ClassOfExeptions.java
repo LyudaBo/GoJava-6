@@ -2,7 +2,7 @@
  * Created by Людмила on 16.04.2017.
  */
 public class ClassOfExeptions extends Exception {
-    public String word;
+    private String word;
 
     public ClassOfExeptions(String word) {
         this.word = word;
